@@ -1,0 +1,13 @@
+dubbo:
+  application:
+    name: boot-user-service-provider  #1. 指定当前服务/应用名称（同样的服务名字相同，不要和别的服务相同）
+    qos-port: 55555
+  registry:
+    address: zookeeper://127.0.0.1:2181  # 2. 指定注册中心的位置
+
+  protocol: #指定通讯规则(通讯协议?通讯端口)
+    name: dubbo #通讯协议
+    port: 20080 # 通讯端口
+
+  monitor:
+    protocol: registry  #配置 monitor 就能在监控中心监控服务

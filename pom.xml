@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.3.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.atguigu.gmall</groupId>
+    <artifactId>gmall-family</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>gmall-interface</module>
+        <module>user-service-consumer</module>
+        <module>user-service-provider</module>
+        <module>boot-user-service-provider</module>
+        <module>boot-order-service-consumer</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <dubbo.version>2.6.5</dubbo.version>
+        <curator-framework.version>2.12.0</curator-framework.version>
+        <dubbo-spring.version>0.2.0</dubbo-spring.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator-framework.version}</version>
+            </dependency>
+
+            <!--dubbo-spring-boot-->
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-spring.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

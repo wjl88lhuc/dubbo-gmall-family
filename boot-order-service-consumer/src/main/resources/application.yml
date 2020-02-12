@@ -1,0 +1,17 @@
+
+dubbo:
+  application:
+    name: boot-order-service-consumer #配置应用名称
+    qos-port: 33333
+
+  registry:
+    address: zookeeper://127.0.0.1:2181 #指定注册中心地址
+  monitor:
+    protocol: registry  #配置 monitor 就能在监控中心监控服务
+  consumer:
+    # dubbo.consumer.check = false 表示配置当前消费者的统一规则：所有的服务都不检查，这样就即使服务提供者不在注册中心被检测到，那么页不会报错。
+    # 如果配置成：dubbo.consumer.check = true (或者默认)，那么在启动消费者的时候如果服务提供者在注册中心不被检测到，那么消费真启动就会报错。
+    check: false
+
+server:
+  port: 8091  # 因为springboot的tomcat服务器的运行端口默认是8080,所以这就自定义
