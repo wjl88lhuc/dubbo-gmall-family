@@ -24,7 +24,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <dubbo.version>2.6.5</dubbo.version>
+        <dubbo.version>2.6.9</dubbo.version>
         <curator-framework.version>2.12.0</curator-framework.version>
         <dubbo-spring.version>0.2.0</dubbo-spring.version>
     </properties>
